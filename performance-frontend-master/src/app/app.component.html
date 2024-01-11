@@ -1,0 +1,22 @@
+<!-- dashboard header-->
+<!-- <app-navbar *ngIf="showHead"></app-navbar> -->
+
+
+<!-- home body(included header and footer) -->
+<app-home-body *ngIf="showHead"></app-home-body>
+
+<!-- Trainee sidenave and topnav and Trainee body-->
+<app-trainee-topnavbar *ngIf="showTrainee" [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-trainee-topnavbar>
+<app-trainee-sidenav *ngIf="showTrainee" (onToggleSideNav)="onToggleSideNav($event)"></app-trainee-sidenav>
+<app-trainee-body *ngIf="showTrainee"[collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-trainee-body>
+
+
+<!-- admin sidenav and topnav and body -->
+<app-admin-topnav *ngIf="showAdmin"></app-admin-topnav>
+<app-admin-sidenav *ngIf="showAdmin" (onToggleSideNav)="onToggleSideNav($event)"></app-admin-sidenav>
+<app-admin-body *ngIf="showAdmin" [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-admin-body>
+
+<!-- dashboard footer-->
+<!-- <app-footer *ngIf="showHead"></app-footer> -->
+
+
