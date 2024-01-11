@@ -1,0 +1,10 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+nav {
+    width: calc(100% - 80px);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}

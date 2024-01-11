@@ -1,0 +1,24 @@
+<header>
+    <nav [ngClass]="getNavbar()">
+        <div class="nightmode">
+            <mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+            </mat-slide-toggle> 
+        </div>
+        <div class="dropdown">
+            <input style="display:none;" id="dropdownInput" type="checkbox" />
+            <div class="dropdown-content">
+                <!-- <p *ngFor="let i of data" (click)="setElement(i)" for="dropdownInput">
+                    <label for="dropdownInput">{{ i }}</label>
+                </p> -->
+                <p><label><a routerLink="">Profile</a></label></p>
+            </div>
+        
+            <label for="dropdownInput"><i class="bi bi-person-circle"></i></label>
+            <label for="dropdownInput" class="overlay"></label>
+        </div>
+
+        
+        <!-- <i class="bi bi-person-circle"></i> -->
+
+    </nav>
+</header>

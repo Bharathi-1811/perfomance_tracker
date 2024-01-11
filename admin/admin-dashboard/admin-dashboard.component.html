@@ -1,0 +1,26 @@
+<h3>Dashboard</h3>
+<nav class="navbar">
+    <div class="form-outline mt-3">
+      <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="search"
+        aria-label="search" />
+    </div>
+  </nav>
+  <div id="tableallign">
+    <table class="table table-bordered table-responsive">
+      <thead>
+        <tr>
+          <th>Zid<i class="fa fa-sort"></i></th>
+          <th>name<i class="fa fa-sort"></i></th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let t of trainees | filter:searchtext;">
+          <td>{{t.zid}}</td>
+          <td>{{t.name}}</td>
+          <td><button class ="btn btn-primary btn" (click)="viewTrainee(t.zid)">view</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

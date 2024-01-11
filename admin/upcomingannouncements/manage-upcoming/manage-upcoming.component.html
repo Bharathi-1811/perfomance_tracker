@@ -1,0 +1,80 @@
+<h3>MANAGE UPCOMING TEST</h3>
+<header>
+    <nav>
+        <div class="addbox">
+            <button class="btn btn-primary" [routerLink]="['/createupcomingtest']">Add</button>
+        </div>
+    </nav>
+</header>
+
+<table class="table table-striped mb-5">
+    <thead>
+    <tr>
+        <th>testId</th>
+        <th>BATCH AND TOPIC NAME</th>
+        <th>RETEST NUMBER</th>
+        <th>DATE</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+    </tr>
+</thead>
+<tbody>
+    <tr let *ngFor="let x of tracs">
+        <td>{{x.testId}}</td>
+        <td>{{x.combinationId}}</td>
+        <td>{{x.retestNo}}</td>
+        <td>{{x.selectDate}}</td>
+        <td><button (click)="updatecombination(x.testId)" class="btn btn-warning">Edit</button></td>
+        <td><button (click)="deletecom(x.testId)" class="btn btn-danger" style="margin-left: 10px;">Delete</button></td>
+        
+    </tr>
+</tbody>
+</table>
+<h3>ONGOING TESTS</h3>
+<table class="table table-striped mt-4 mb-5">
+    <thead>
+    <tr>
+        <th>testId</th>
+        <th>BATCH AND TOPIC NAME</th>
+        <th>RETEST NUMBER</th>
+        <th>DATE</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+    </tr>
+</thead>
+<tbody>
+    <tr let *ngFor="let x of ongoing">
+        <td>{{x.testId}}</td>
+        <td>{{x.combinationId}}</td>
+        <td>{{x.retestNo}}</td>
+        <td>{{x.selectDate}}</td>
+        <td><button (click)="updatecombination(x.testId)" class="btn btn-warning">Edit</button></td>
+        <td><button (click)="deletecom(x.testId)" class="btn btn-danger" style="margin-left: 10px;">Delete</button></td>
+        
+    </tr>
+</tbody>
+</table>
+<h3>PAST TESTS</h3>
+<table class="table table-striped mt-5">
+    <thead>
+    <tr>
+        <th>testId</th>
+        <th>BATCH AND TOPIC NAME</th>
+        <th>RETEST NUMBER</th>
+        <th>DATE</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+    </tr>
+</thead>
+<tbody>
+    <tr let *ngFor="let x of past">
+        <td>{{x.testId}}</td>
+        <td>{{x.combinationId}}</td>
+        <td>{{x.retestNo}}</td>
+        <td>{{x.selectDate}}</td>
+        <td><button (click)="updatecombination(x.testId)" class="btn btn-warning">Edit</button></td>
+        <td><button (click)="deletecom(x.testId)" class="btn btn-danger" style="margin-left: 10px;">Delete</button></td>
+        
+    </tr>
+</tbody>
+</table>

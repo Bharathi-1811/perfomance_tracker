@@ -1,0 +1,28 @@
+<h3>MANAGE BATCH AND TRAINEE</h3>
+<header>
+    <nav>
+        <div class="addbox">
+            <button class="btn btn-primary" [routerLink]="['/addbatchtraineecombo']">Add</button>
+        </div>
+    </nav>
+</header>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>BATCH NAME</th>
+            <th>TRAINEES ZID </th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr let *ngFor="let x of alldata">
+            <td>{{x.batchId}}</td>
+            <td>{{x.zid}}</td>
+            <td><button class="btn btn-warning" (click)="edit(x.btId)">Edit</button></td>
+            <td><button class="btn btn-danger" style="margin-left: 10px;" (click)="delete(x.btId)">Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>

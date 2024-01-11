@@ -1,0 +1,14 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+nav {
+    width: calc(100% - 80px);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+tr td{
+    font-size: 17px;
+    font-family: sans-serif;
+}

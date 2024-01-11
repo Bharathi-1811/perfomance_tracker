@@ -1,0 +1,39 @@
+<h2>MANAGE ZID AND EMAIL</h2>
+<header>
+    <nav>
+        <div class="addbox">
+            <button class="btn btn-primary" [routerLink]="['/addtrainee']">Add</button>
+        </div>
+            <span class="error">{{msg | json}}</span>
+    </nav>
+</header>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th> <input type="checkbox" name="selectAll" id="selectAll" (change)="selectUnselectAll($event)"></th>
+        <th>ZID</th>
+        <th>EMAIL</th>
+        <th>Status</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+    </tr>
+</thead>
+<tbody>
+    <tr let *ngFor="let x of szid"> 
+        <td><input type="checkbox" name="myCheckbox" [checked]="x.isSelected" (change)="singleChange($event, x.zid)"></td>
+        <td>{{x.zid}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.status}}</td>
+        <td><button (click)="updatesink(x.id)" class="btn btn-warning">Edit</button></td>
+        <td><button (click)="deletesink(x.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button></td>
+        
+    </tr>
+</tbody>
+</table>
+<footer>
+    <div class="submit">
+    <button class="btn btn-primary" (click)="getSelectedCheckboxes()">Send Email</button>
+</div>
+</footer>
+

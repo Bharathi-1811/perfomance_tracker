@@ -1,0 +1,33 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+h3{
+  margin-left: 10px;
+}
+#tableallign{
+    padding: 0 0px;
+    margin: 30px auto 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 98%;
+    height: 450px;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+}
+
+input[type="search"]{
+  height: 36px;
+  width: 300px;
+  border-radius: 7px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #aaa;
+  padding: 0 10px;
+  color: rgb(18, 16, 16);
+  margin-left: 10px;
+}
+form input[type="search"]:focus {
+  border: 1px solid rgb(47, 99, 255);
+  background-color: white;
+}

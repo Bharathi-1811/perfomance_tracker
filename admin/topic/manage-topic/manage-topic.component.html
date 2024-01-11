@@ -1,0 +1,52 @@
+<h2>Manage Topics</h2>
+<header>
+    <nav>
+        <div class="addbox">
+            <button class ="btn btn-primary" [routerLink]="['/createtopic']">add</button>
+        </div>
+    </nav>
+</header>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Topic No</th>
+            <th>Topic Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of topics">
+            <td>{{t.topicId}}</td>
+            <td>{{t.topicName}}</td>
+            <td>
+                <button (click)="updateTopic(t.topicId)" class="btn btn-warning">Update</button>
+                <button (click)="deleteTopic(t.topicId)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<!-- <div class="col-md-6 offset-md-3">
+    <h3> Manage Topics</h3>
+    
+    <form [formGroup]="addForm" (ngSubmit) = "onSubmit()">
+      <div class="form-group">
+        <label> Subject Id</label>
+      <input type="text" name="id" formControlName="Id" class="form-control">
+    </div><br>
+    
+    <div class="form-group">
+      <label> Subject Name</label>
+      <input type="text" name="Name"  formControlName="Name" class="form-control" id="name" >
+    </div><br>
+    
+    
+      
+    <button class = "btn btn-success" type="submit">submit</button>
+
+     </form>
+         
+</div> -->

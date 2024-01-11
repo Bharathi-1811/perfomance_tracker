@@ -1,0 +1,46 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.topnav {
+    text-align: center;
+    text-decoration: none;
+    height: 40px;
+    display: flex;  
+  }
+h2{
+    margin: 40px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  table.container
+  {
+   table-layout: auto;
+   width:100%;
+  }
+
+  td{
+    text-align: center;
+  }
+
+  th{
+    text-align: center;
+  }
+  body
+  {
+    position: relative;
+  }
+
+  .element
+  {
+    background-color: rgb(211, 211, 253);
+    border-color: black;
+
+  }
+  .elementsec
+  {
+    margin-left: 20px;
+    background-color: rgb(211, 211, 253);
+    border-color: black;
+  }

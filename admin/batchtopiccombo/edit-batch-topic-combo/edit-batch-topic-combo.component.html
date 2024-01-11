@@ -1,0 +1,27 @@
+<h2>UPDATE COMBINATION</h2>
+<div class="col-md-6">
+
+    <form [formGroup]="updatecombination" (ngSubmit)="updateSubmit()">
+
+        <div class="form-group">
+            <label> batchTopicId </label>
+            <input type="text" name="batchTopicId" formControlName="batchTopicId" class="form-control" readonly
+                [(ngModel)]="futureData.batchTopicId">
+        </div><br>
+
+        <div class="form-group">
+            <label>Select Batch</label>
+            <select name="batchId" formControlName="batchId" class="form-control" [(ngModel)]="futureData.batchId">
+                <option *ngFor="let b of batch" [value]="b.batchId">{{b.name}}</option>
+            </select>
+        </div><br><br>
+
+        <div class="form-group">
+            <label>Select Topic</label>
+            <select name="topicId" formControlName="topicId" class="form-control" [(ngModel)]="futureData.topicId">
+                <option *ngFor="let b of topic" [value]="b.topicId">{{b.topicName}}</option>
+            </select>
+        </div><br><br>
+
+        <button class="btn btn-success" type="submit">submit</button>
+    </form>

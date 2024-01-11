@@ -1,0 +1,31 @@
+<h2>Manage Batches</h2>
+<header>
+    <nav>
+        <div class="addbox">
+            <button class ="btn btn-primary" [routerLink]="['/createbatch']">add</button>
+        </div>
+    </nav>
+</header>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th> Batch Name</th>
+            <th>Batch Year</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of batches">
+            
+            <td>{{b.batchId}}</td>
+            <td>{{b.name}}</td>
+            <td>{{b.year}}</td>
+            <td>
+                <button (click) ="updateBatch(b.batchId)" class ="btn btn-warning">Edit</button>
+                <button (click) ="deleteBatch(b.batchId)" class ="btn btn-danger" style="margin-left: 10px;">Delete</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>

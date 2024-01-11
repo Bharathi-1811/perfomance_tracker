@@ -1,0 +1,26 @@
+<h2>SINK ZID AND EMAIL</h2>
+<header>
+    <nav>
+        <div class="addbox">
+            <button class="btn btn-primary" [routerLink]="['/managetrainee']">Show</button>
+        </div>
+    </nav>
+</header>
+
+
+<div class="col-md-6">
+
+<form [formGroup]="createsink" (ngSubmit)="formSubmit()">
+
+    <div class="form-group">
+     <label>Zid</label>
+     <input type = "text" name="zid" formControlName="zid" class="form-control">
+    </div><br><br>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type = "email" name="email" formControlName="email" class="form-control">
+    </div><br><br>
+    <button class="btn btn-success w-25" type="submit">submit</button>
+</form>
+</div>

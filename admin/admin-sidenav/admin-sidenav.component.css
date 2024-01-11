@@ -1,0 +1,132 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+.sidenav {
+    background: #fff;
+    /* background-color: #1d88bd76; */
+    /* background-color: white; */
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    box-shadow: 0.063rem 0 1.25rem 0 #aaa;
+    border-right: 1px solid #aaa;
+    
+    .logo-container {
+        display: flex;
+        align-items: center;
+        padding: 0.938rem 0.938rem 0 0.938rem;
+        width: 100%;
+        
+
+        .logo {
+
+            background: #fff;
+            align-items: center;
+            width: 3rem;
+            min-width: 3rem;
+            border-radius: 0.313rem;
+            padding: 0.313rem;
+            font-size: 24px;
+            font-weight: 900;
+            cursor: pointer;
+            border: 1px solid royalblue;
+            height: 50px;
+
+        }
+        .logo img{
+
+            width: 2.8rem;
+            height: 45px;
+        }
+
+        .logo-text {
+            margin-top: 10px;
+            margin-left: 1.5rem;
+            font-weight: 800;
+            color: #0E4BF1;
+        }
+        .btn-close {
+            margin-left: 0.5rem;
+            cursor: pointer;
+            width: 6rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: transparent;
+            border: none;
+
+            .bi-x {
+                color: #0E4BF1;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.sidenav-collapsed {
+    width: 16.5625rem;
+}
+
+.sidenav-nav {
+    list-style: none;
+    padding: 0.938rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 3.65rem);
+    cursor: pointer;
+}
+
+.sidenav-nav-item {
+    width: 100%;
+    margin-bottom: 0.625rem;
+
+    .side-nav-link {
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        color: #f3f3f3;
+        text-decoration: none;
+        border-radius: 0.625rem;
+        transition: all .3s ease;
+
+        .sidenav-link-icon {
+            font-size: 22px;
+            width: 2rem;
+            min-width: 2rem;
+            margin: 0 0.5rem;
+            text-align: center;
+            color: #0E4BF1;
+        }
+
+        .sidenav-link-text {
+            margin-left: 1.5rem;
+            color: #000;
+        }
+    }
+    
+}
+
+.sidenav-nav-item:hover {
+    .side-nav-link {
+        background-color: #0E4BF1;
+    }
+    .sidenav-link-icon{
+        color: #fff;
+    }
+    .sidenav-link-text{
+        color: #fff;
+    }
+}
+
+.active{
+    
+    background-color: #0E4BF1;
+}
+.active .sidenav-link-icon{
+    color: #fff;
+}
+.active .sidenav-link-text{
+    color: #fff;
+}

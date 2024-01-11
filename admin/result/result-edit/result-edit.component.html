@@ -1,0 +1,22 @@
+<div class="col-md-6">
+    <h3> Edit Result</h3>
+
+    <div class="col-md-6 ">
+        <form [formGroup]="resultEdit" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label> Zid</label>
+                <input type="text" name="zid" formControlName="zid" class="form-control" [(ngModel)]="result.zid" readonly>
+            </div><br>
+
+            <div class="form-group">
+                <label> Mark </label>
+                <input type="text" name="mark" formControlName="mark" class="form-control" [(ngModel)]="result.score">
+            </div><br>
+
+            <button class="btn btn-success" type="submit">submit</button>
+
+        </form>
+
+    </div>
+
+</div>
